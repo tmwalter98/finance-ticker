@@ -122,4 +122,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.cryptocurrency-icons-master/
 config.json
+
+cryptocurrency-icons-master/
