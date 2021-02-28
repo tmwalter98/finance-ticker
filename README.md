@@ -10,5 +10,5 @@
 - [ ] Standardize API integration for simpler aggregation
 - [ ] Restructure project to improve extensibility
 - [ ] Implement less error-prone mechanism to store config data
-- [ ] Store credentials securely
+- [X] Store credentials securely
 

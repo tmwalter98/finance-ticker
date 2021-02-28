@@ -16,7 +16,7 @@ except:
 
 TICKER_INTERVAL_SECONDS = 5
 
-class TrayAppIndicator(threading.Thread):
+class SystemTrayIndicator(threading.Thread):
     def __init__(self, app_id, tickers):
         threading.Thread.__init__(self)
         self.app_id = app_id

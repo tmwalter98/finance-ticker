@@ -1,3 +1,3 @@
 
-from TickerSync import TickerSync
+from FinanceTickerAPIKit import FinanceTickerAPIKit
 from .ETradeSync import ETradeSync

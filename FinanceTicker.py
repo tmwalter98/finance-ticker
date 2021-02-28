@@ -1,12 +1,9 @@
 #!/usr/bin/python3
-import gi
-import os
-import time
 from signal import pause
 import threading
 
-from tray_appindicator import TrayAppIndicator
-from TickerSync import ETradeSync
+from SystemTrayIndicator import SystemTrayIndicator
+from FinanceTickerAPIKit import ETradeSync
 
 
 APPINDICATOR_ID = 'Finance Ticker'
@@ -17,7 +14,7 @@ class FinanceTicker(threading.Thread):
         threading.Thread.__init__(self)
         self.daemon = True
         self.tickers = {}
-        self.tray_indicator = TrayAppIndicator(APPINDICATOR_ID, self.tickers)
+        self.tray_indicator = SystemTrayIndicator(APPINDICATOR_ID, self.tickers)
         self.tray_indicator.daemon = True
         
         self.etrade = ETradeSync(self.tickers)
@@ -32,4 +29,3 @@ class FinanceTicker(threading.Thread):
 if __name__ == "__main__":
     ft = FinanceTicker()
     ft.start()
-    
